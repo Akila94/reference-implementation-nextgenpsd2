@@ -67,10 +67,6 @@ abstract class AbstractAccountsFlow {
 
     void doDefaultInitiation(String consentPath, String initiationPayload) {
 
-        //Generate Access Token
-//        applicationAccessToken = BerlinRequestBuilder.getApplicationToken(BerlinConstants.AUTH_METHOD.PRIVATE_KEY_JWT,
-//                scopes)
-
         //initiation
         consentResponse = BerlinRequestBuilder.buildBasicRequest(applicationAccessToken)
                 .body(initiationPayload)
